@@ -1,1 +1,1 @@
-*{margin:0;padding:0}li,ul{list-style:none}h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:400}a{text-decoration:none}b,strong{font-weight:400}em,i{font-style:normal}.fl{float:left}.fr{float:right}
+*{margin:0;padding:0}li,ul{list-style:none}h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:400}a{text-decoration:none}b,strong{font-weight:400}em,i{font-style:normal}.fl{float:left}.fr{float:right}.clearfix:after,.clearfix:before{content:"";display:block;clear:both}

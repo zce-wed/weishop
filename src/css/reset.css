@@ -19,3 +19,8 @@ i,em{
 .fr{
     float: right;
 }
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}

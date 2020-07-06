@@ -87,7 +87,8 @@ const serverHandle =()=>{
     return gulp.src('./dist')
     .pipe(
         server(
-            {
+            {   
+                // host:"10.36.133.18"
                 port:8090,
                 open:'/pages/index.html',
                 livereload:true

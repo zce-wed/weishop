@@ -1,3 +1,10 @@
+$color:#f10582;
+body{
+  font: 12px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    min-width: 1000px;
+}
 #vip-common-header {
     position: relative;
     z-index: 999;
@@ -215,7 +222,7 @@
     width: 100%;
     height: 100%;
     font-size: 10px;
-    background-color: rgb(114, 44, 44);
+    // background-color: rgb(114, 44, 44);
   }
   .pc-fengding-left {
     width: 510px;
@@ -972,5 +979,424 @@ img{
       object-fit: cover;
     }
   }
+}
+#wrap{
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 15px 0 0;
+  overflow: hidden;
+  width: auto;
+}
+.new-taday{
+  width: 1000px;
+  margin: 0 auto 20px;
+}
+.shop-title{
+  margin-bottom: 20px;
+  // overflow: hidden;
+  position: relative;
+  height: 68px;
+}
+.condow-img{
+  position: absolute;
+  left: 50%;
+  margin-left: -585px;
+  top: 0;
+}
+.shop-sort-title{
+  margin-bottom: 30px;
+  min-height: 43px;
+  border-bottom: 1px #1a1a1a solid;
+  position: relative;
+  img{
+    vertical-align: top;
+  }
+}
+.shop-time{
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  margin-left: -99px;
+  margin-top: 5px;
+  em{
+      margin-right: 18px;
+  }
+}
+.sleted-content{
+  width: 1200px;
+}
+.brand-item{
+     display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-right: 20px;
+    width: 490px;
+    height: 333px;
+    background: #fff;
+    // background: rgb(179, 56, 56);
+    .brand-info{
+      position: relative;
+      padding-left: 10px;
+      // background-color: #ccc;
+    }
+    img{
+      width: 490px;
+      height: 235px;
+    }
+    .brand-name{
+      margin-top: 18px;
+      cursor: pointer;
+      font-family: MicrosoftYaHei;
+      font-weight: 700;
+      font-size: 18px;
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 455px;
+      display: block;
+    }
+    .brand-discount-pms{
+      line-height: 32px;
+      height: 32px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      .brand-discount{
+        color: #4d4d4d;
+        font-size: 16px;
+        margin-right: 10px;
+        font-family: MicrosoftYaHei;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;  
+        display: inline-block;
+        .salebg2{
+          font-family: Arial;
+          font-size: 18px;
+          color: #f10582;
+          margin-right: 3px;
+          font-weight: 700;
+        }
+      }
+    }
+}
+.index-nav-sort{
+  position: absolute;
+  width: 78px;
+  left: 50%;
+  margin-left: -612px;
+  top: 100px;
+  background: #fff;
+  z-index: 100;   
+}
+.index-nav-wrap{
+border: 1px solid #d6d6d6;
+border-radius: 3px;
+}
+.index-nav-list{
+  padding: 5px 7px 0;
+  margin-bottom: 5px;
+}
+.index-nav-item{
+  display: block;
+  padding: 8px 2px;
+  height: 20px;
+  border-bottom: 1px solid #eaeaea;
+  color: #666;
+}
+.index-nav-item-active{
+    position: relative;
+    z-index: 1;
+    left: -3px;
+    margin-top: -1px;
+    padding: 8px 8px 10px;
+    width: 54px;
+    background-color: #f10180;
+    border-bottom: 0;
+    color: #fff;
+    border-radius: 4px;
+}
+.nav-icon{
+// margin-right: 6px;
+width: 20px;
+height: 20px;
+color: #949494;
+}
+.nav-title{
+line-height: 20px;
+white-space: nowrap;
+}
+.shop-sort-ft{
+  border-top: 1px solid #e8e8e8;
+}
+.shop-sort-ft-btn{
+    border-top: 1px solid #e8e8e8;
+    width: 324px;
+    display: block;
+    color: #fff;
+    height: 44px;
+    background-color: #f10180;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 44px;
+    margin: -1px auto 20px;
+}
+.footer{
+  font: 12px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+  display: block;
+  clear: both;
+  overflow: hidden;
+  line-height: 22px;
+  padding-top: 0;
+  border-top: 1px solid #ebebeb;
+  background-color: #fcfcfc;
+  color: #4d4d4d;
+    .footer-vip{
+      width: 1000px;
+      margin: 0 auto;
+      overflow: hidden;
+      li{
+        // background-color: $color;
+        float: left;
+        list-style: none;
+        // background-color: green;
+        display: block;
+        margin-top: 30px;
+        margin-right: 38px;
+        margin-left: 10px;
+        width: 72px;
+        height: 75px;
+        i{
+          // background-color: green;
+          float: left;
+          margin: 20px 15px 10px;
+          font-size: 40px;
+          text-align: center;
+        }
+        b{
+          font-size: 12px;
+          color: #666;
+          float: left;
+          margin-left: 10px;
+        }
+      }
+    }
+    .footer-list{
+      width: 1000px;
+      // background-color: green;
+      overflow: hidden;
+      zoom: 1;
+      margin: 37px auto 25px; 
+      line-height: 20px;
+      dl{
+        float: left;
+        width: 145px;
+        height: 146px;
+        padding-left: 16px;
+        border-right: 1px solid #e0e0e0;
+        dt{
+          margin-bottom: 4px;
+          color: #4d4d4d;
+        }
+        dd{
+          img{
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+    }
+
+}
+.last-dl{
+    padding-left: 0;
+    width: 136px;
+    text-align: center;
+    border-right: 0;
+    display: block;
+}
+.footer-infor {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+}
+.footer-infor-link {
+  background-color: #d7237e;
+  line-height: 30px;
+  a {
+      margin-left: 2px;
+      margin-right: 2px;
+      color: #fff !important;
+    }
+   
+}
+.footer-infor-txt {
+  color: #999;
+  margin: 14px 0;
+  line-height: 19px;
+}
+.footer a {
+  color: grey;
+  text-decoration: none;
+}
+.m-sidebarcom {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  width: 36px;
+  height: 100%;
+  font-family: "Microsoft YaHei";
+}
+.sidebarcom-nav {
+  position: relative;
+  z-index: 101;
+  height: 100%;
+  background-color: #262626;
+}
+.sidebarcom-nav-cnt {
+  margin-top: -250px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+.sidebarcom-oper{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  li{
+    line-height: 1.8;
+    position: relative;
+    width: 36px;
+    margin-bottom: 8px;
+    text-align: center;
+    cursor: pointer;
+    display: list-item;
+  }
+}
+.sidebarcom-my-con {
+  position: relative;
+  padding: 8px 0 6px;
+  i{
+    &:first-of-type{
+
+      color: #fff;
+      font-size: 20px;
+     
+    }
+    &:last-of-type{
+      position: relative;
+      top: -10px;
+      font-size: 10px;
+    }
+  }
+}
+.i-sidebarcom-my {
+  position: relative;
+  display: block;
+  width: 36px;
+  font-size: 12px;
+}
+.sidebarcom-my-name {
+  font-size: 12px;
+  color: #fff;
+}
+.sidebarcom-cart-bar{
+    background-color: #df147f;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+}
+.is-cart-highlight{
+  margin: -1px auto 0;
+  padding-top: 15px;
+  width: 24px;
+}
+.sidebarcom-cart-text{
+    margin: 0 auto;
+    width: 14px;
+    line-height: 18px;
+    font-size: 14px;
+}
+.sidebarcom-rith-num{
+  display: inline-block;
+    margin: 5px auto 0;
+    line-height: 22px;
+    border-bottom: 1px solid #4c4c4c;
+    text-align: center;
+    background-image: url(../image/sprite-hash-c9455e5d.png);
+    background-position: -230px -60px;
+    width: 20px;
+    height: 24px;
+    background-repeat: no-repeat;
+    color: #9f2727;
+    padding-bottom: 15px;
+    position: relative;
+    bottom: -1px;
+}
+.sidebarcom-asset{
+  position: relative;
+  width: 36px;
+  margin-bottom: 8px;
+  text-align: center;
+  cursor: pointer;
+  i{
+    position: relative;
+    display: block;
+    width: 36px;
+    height: 30px;
+    line-height: 36px;
+    background-color: #262626;
+    font-family: vipSidebarFont;
+    font-size: 20px;
+    line-height: 18px;
+    color: #fff;
+
+  }
+  p{
+    position: absolute;
+    right: -120px;
+    top: 0;
+    z-index: -1;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 8px;
+    border-radius: 3px 0 0 3px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-right: none;
+    font-size: 14px;
+  }  
+}
+.sidebarcom-nav-ft{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  a{
+    outline: 0;
+    color: #333;
+  }
+  i{
+    color: #ccc;
+  }
+}
+.sidebarcom-survey {
+  position: relative;
+  width: 36px;
+  margin-bottom: 8px;
+  text-align: center;
+  cursor: pointer;
 }
 
