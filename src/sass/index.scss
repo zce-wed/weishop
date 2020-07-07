@@ -1283,12 +1283,14 @@ white-space: nowrap;
     text-align: center;
     cursor: pointer;
     display: list-item;
+    
   }
 }
 .sidebarcom-my-con {
   .sidebarcom-my-con-hide{
+    z-index: 10;
     position: absolute;
-    left: -275px;
+    left:36px;
     top: 16px;
     width: 275px;
     height: 210px;

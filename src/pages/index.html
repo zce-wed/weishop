@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/index.css"> 
     <link rel="stylesheet" href="../font/font_1913117_jn8ql0at89f/iconfont.css">
     <link rel="stylesheet" href="../lib/swiper/css/swiper.min.css"> 
+    <script src="../lib/jquery.js"></script>
+    <script src="../js/index.js"></script>
 </head>
 <body>
     <!-- 头部 -->
@@ -1235,7 +1237,7 @@
                             <div class="side-right-img">
                                 <img src="../image/side-right-img.png" alt="">
                             </div>
-                            <p>你好！请 <a href="">登录</a> | <a href="">注册</a> </p>
+                            <p>你好！请 <a href="./login.html">登录</a> | <a href="./register.html">注册</a> </p>
                         </div>
                         <i class="i-sidebarcom-my iconfont icon-zhanghao">    
                         </i>
@@ -1323,7 +1325,6 @@
 
 
 
-
     <script src="../lib/swiper/js/swiper.min.js"></script>
     <script>        
         var mySwiper = new Swiper ('.swiper-container', {
@@ -1361,6 +1362,46 @@
         mySwiper.navigation.$nextEl.addClass('hide');
         mySwiper.navigation.$prevEl.addClass('hide');
     }       
+    </script>
+    <script>
+       $('.small-btn').click(function(){
+
+            $(".sidebarcom-my-con-hide").css(
+                {
+                    display: "none"
+                }
+            ).stop().animate(
+                {
+                    left:36
+                },500,'linear',function(){console.log('动画完成了')}
+            )
+    
+        })
+        $(".sidebarcom-my-con").on('mouseover',function(){
+            $(".sidebarcom-my-con-hide")
+            .css(
+                {
+                    display: "block"
+                }
+            )
+            .stop().animate(
+                {
+                    left: -275
+                },500,'linear',function(){console.log('动画完成了')}
+            )
+    
+        }).on('mouseleave',function(){
+            $(".sidebarcom-my-con-hide").css(
+                {
+                    display: "none"
+                }
+            ).stop().animate(
+                {
+                    left:36
+                },500,'linear',function(){console.log('动画完成了')}
+            ) 
+        })
+    
     </script>
 </body>
 </html>
