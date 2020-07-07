@@ -114,18 +114,31 @@ body{
   .header-nav {
     height: 43px;
   }
+  .header-nav-fixed{
+    background-color: rgb(225, 228, 225);
+    position: fixed;
+    top: 0px;
+    box-shadow: #4d4d4d;
+
+    width: 1000px;
+  }
   .header-link {
+    position: relative;
     li {
       font-size: 16px;
       float: left;
       position: relative;
       height: 43px;
       line-height: 43px;
+     
       a {
         display: inline-block;
         color: #333;
         padding: 0 10px;
         text-align: center;
+        &:hover{
+          color: $color;
+        }
       }
     }
     i {
@@ -138,6 +151,7 @@ body{
     }
   }
   .header-link-first {
+    position: relative;
     text-align: center;
     background-color: #f10180;
     width: 156px;
@@ -147,9 +161,70 @@ body{
       vertical-align: middle;
     }
   }
+  
   .header-link-active {
     font-weight: 700;
     color: #fa2a83 !important;
+  }
+  .ul-hide{
+    display: none;
+    height: 387px;
+    overflow: hidden;
+    width: 156px;
+    position: absolute;
+    top:43px;
+    li{
+      // display: none;
+      font-size: 13px;
+      color: white;
+      cursor: pointer;
+      float: left;
+      text-align: center;
+      background-color: #f10180;
+      width: 156px;
+      &:hover{
+        background-color: rgb(248, 248, 248);
+        color: $color;
+      }
+    }
+
+  }
+  .ul-hide-content{
+    position: relative;
+    li{
+      display: none;
+      top: 43px;
+      left: 156px;
+      position: absolute;
+      height: 387px;
+      width: 580px;
+      background-color: #f8f8f8;
+    }
+    dl{
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 20px;
+      dt{
+        display: inline-block;
+        width: 100px;
+        
+        i{
+          margin-left: 10px;
+          font-weight: 700;
+          
+        }
+        span{
+          float: right;
+        }
+      }
+      dd{
+        margin-left: 10px;
+        display: inline-block;
+      }
+    }
+  }
+  .ul-hide-content-active{
+    display: block !important;
   }
   #banner {
     padding-top: 30px;
@@ -1118,6 +1193,10 @@ border-radius: 3px;
     color: #fff;
     border-radius: 4px;
 }
+.is-lift-nav-fixed {
+  position: fixed;
+  top: 112px;
+}
 .nav-icon{
 // margin-right: 6px;
 width: 20px;
@@ -1256,14 +1335,14 @@ white-space: nowrap;
 }
 .sidebarcom-nav {
   position: relative;
-  z-index: 101;
+  // z-index: 101;
   height: 100%;
   background-color: #262626;
 }
 .sidebarcom-nav-cnt {
   margin-top: -250px;
   height: 400px;
-  position: absolute;
+  position: absolute; 
   top: 50%;
   right: 0;
 }
@@ -1274,7 +1353,7 @@ white-space: nowrap;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    // padding-inline-start: 40px;
   li{
     line-height: 1.8;
     position: relative;
@@ -1288,7 +1367,7 @@ white-space: nowrap;
 }
 .sidebarcom-my-con {
   .sidebarcom-my-con-hide{
-    z-index: 10;
+    z-index: -1;
     position: absolute;
     left:36px;
     top: 16px;

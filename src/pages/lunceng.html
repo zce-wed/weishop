@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-size: 30px;
+        }
+
+        .header {
+            width: 1100px;
+            height: 200px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .banner {
+            width: 1100px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 0 auto;
+        }
+
+        .footer {
+            width: 1100px;
+            height: 300px;
+            background-color: darkolivegreen;
+            margin: 0 auto;
+        }
+
+        .content {
+            width: 1100px;
+            margin: 0 auto;
+        }
+        .content .qinzi {
+            width: 100%;
+            height: 324px;
+            background-color: rosybrown;
+        }
+
+        .content .liren {
+            width: 100%;
+            height: 304px;
+            background-color: slategrey;
+        }
+
+        .content .xuexi {
+            width: 100%;
+            height: 300px;
+            background-color: khaki;
+        }
+
+        .content .lvyou {
+            width: 100%;
+            height: 300px;
+            background-color: greenyellow;
+        }
+
+        .content .zhusu {
+            width: 100%;
+            height: 300px;
+            background-color: darkcyan;
+        }
+
+        .content .meishi {
+            width: 100%;
+            height: 300px;
+            background-color: lightgreen;
+        }
+
+        .floor {
+            width: 50px;
+            position: fixed;
+            top: 150px;
+            left: 50%;
+            margin-left: -620px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .floor li {
+            width: 50px;
+            height: 30px;
+            background-color: grey;
+            margin-bottom: 5px;
+            line-height: 30px;
+            list-style: none;
+            cursor: pointer;
+        }
+        span {
+            display: block;
+            width: 50px;
+            height: 30px;
+            background-color: grey;
+            margin-bottom: 5px;
+            line-height: 30px;
+            list-style: none;
+            cursor: pointer;
+        }
+        .floor .current {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">头部</div>
+    <div class="banner">焦点图</div>
+    <div class="content">
+        <div class="qinzi w">亲子</div>
+        <div class="liren w">丽人</div>
+        <div class="xuexi w">学习</div>
+        <div class="lvyou w">旅游</div>
+        <div class="zhusu w">住宿</div>
+        <div class="meishi w">美食</div>
+    </div>
+    <div class="footer">尾部</div>
+
+    <!-- 电梯导航 -->
+    <div class="floor" style="display: none;">
+        <ul>
+            <li>亲子</li>
+            <li>丽人</li>
+            <li>学习</li>
+            <li>旅游</li>
+            <li>住宿</li>
+            <li>美食</li>
+        </ul>
+        <span>顶部</span>
+    </div>
+</body>
+<script src="../lib/jquery.js"></script>
+<script>
+     var flag = true;  //使用节流阀
+        //页面刚开始隐藏，当页面滚动到content的时候，电梯导航显示
+        $(function () {
+            //页面刷新时调用一次
+            //封装函数，切换显示与隐藏
+            var contentTop = $(".content").offset().top;
+            toggleTool();
+            function toggleTool() {
+                if ($(document).scrollTop() >= contentTop) {
+                    $(".floor").fadeIn();
+
+                } else {
+                    $(".floor").fadeOut();
+                }
+
+            }
+            $(window).scroll(function () {
+                toggleTool()
+                //页面滚动到相应位置，电梯导航按钮添加current类
+                if (flag) {
+                    $('.content .w').each(function (i, ele) {
+                        var cuHeight = ele.offsetHeight / 2;
+                        if ($(document).scrollTop() >= $(ele).offset().top - cuHeight) {
+                            $('.floor li').eq(i).addClass('current').siblings().removeClass();
+
+                        }
+
+                    })
+                }
+
+            })
+
+            //点击电梯导航按钮，页面跳转到相应位置，使用jquery里面的animate
+            $('.floor li ').click(function () {
+                flag = false;
+                $(this).addClass('current').siblings().removeClass();
+                var index = $(this).index();
+                var current = $('.content .w').eq(index).offset().top;
+                $('html,body').stop().animate({
+                    scrollTop: current
+                }, function () {
+                    flag = true;
+                })
+            })
+            $('.floor span').click(function () {
+                $(this).addClass('current');
+                $('html,body').stop().animate({
+                    scrollTop: 0
+                })
+            })
+        })
+</script>
+</html>
