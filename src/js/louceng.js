@@ -24,6 +24,7 @@ window.onscroll = function(){
             // console.log(arr.length)
 			if(getScroll()>=arr[i]&&getScroll()<arr[i+1]){
                 index = i;
+                // console.log(index)
 				break;
 			}
 		}
@@ -31,13 +32,13 @@ window.onscroll = function(){
 }
 //点击menu里面的li,页面缓动到响应楼层
 for(var i=0;i<menuLiArr.length;i++){
-   
+  
     menuLiArr[i].index = i;
     menuLiArr[i].onclick = function(){
-    
+       
         animate(arr[this.index])
         
-        console.log(this.index)
+        // console.log(this.index)
     }
 }
 
