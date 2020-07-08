@@ -14,6 +14,9 @@ for(var i=0;i<contentLiArr.length;i++){
     scrollTop += contentLiArr[i].offsetHeight;
     arr.push(scrollTop)
 }
+arr.push(10563)
+console.log(arr)
+console.log(document.body.offsetHeight)
 // console.log(arr)
 window.onscroll = function(){
     //当页面滚动时,当前被滚到的楼层菜单高亮
@@ -28,7 +31,8 @@ window.onscroll = function(){
 				break;
 			}
 		}
-		light()
+        light()
+        
 }
 //点击menu里面的li,页面缓动到响应楼层
 for(var i=0;i<menuLiArr.length;i++){

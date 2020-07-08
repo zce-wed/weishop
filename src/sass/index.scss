@@ -45,6 +45,7 @@ body{
     }
   }
   .header-search {
+    position: relative;
     margin-top: 33px;
     float: left;
     input {
@@ -54,6 +55,30 @@ body{
       width: 325px;
       height: 32px;
       border: 2px solid #fa2a83;
+    }
+  }
+ 
+  .search-ul{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    z-index: 10;
+    position: absolute;
+    top: 36px;
+    left: 20px;
+    li{
+      cursor: pointer;
+      line-height: 24px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-left: 10px;
+      width: 383px;
+      background-color: #fff;
+      list-style: none;
+      &:hover{
+        color: #fff;
+        font-size: 14px;
+        background-color: $color;
+      }
     }
   }
   input {
