@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../lib/jquery.js"></script>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/goods.css">
+    <link rel="stylesheet" href="../css/index.css"> 
+    <link rel="stylesheet" href="../css/cartshow.css">
     <link rel="stylesheet" href="../font/font_1913117_jn8ql0at89f/iconfont.css">
-    
+    <link rel="stylesheet" href="../lib/bootstarp/css/bootstrap.css">
+    <!-- <script src="../js/index.js"></script> -->
+    <script src="../lib/template-web.js"></script>
    
+    <script src="../js/cartShow.js"></script>
+    <style>
+        .header-search-a{
+            font-size: 12px;
+            right: -54px;
+            position: absolute;
+            height: 32px;
+            top: 0px;
+            border-radius: 3px;
+        }
+        .icon-sousuo{
+            font-size: 22px;
+        }
+        .header-link-first{
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header id="vip-common-header">
@@ -18,7 +38,7 @@
             <!-- logo -->
             <div class="header-logog-inner">
                 <div class="header-logo">
-                    <a href="../pages/index.html"><img src="../image/logo.png" alt="" height="100"></a>
+                    <a href="./index.html"><img src="../image/logo.png" alt="" height="100"></a>
                 </div>
                 <div class="c-services">
                     <ul>
@@ -30,13 +50,7 @@
                 <div class="header-search">
                     <input type="text" class="search-text">
                     <ul class="search-ul" style="background-color: aqua;">
-                       <!-- <li>12432422531515</li>
-                       <li>12432422531515</li>
-                       <li>12432422531515</li>
-                       <li>12432422531515</li>
-                       <li>12432422531515</li>
-                       <li>1243</li>
-                       <li>1266666666666666</li> -->
+                     
                     </ul>
                     <a href="#" class="header-search-a" ><span class="iconfont icon-sousuo"></span></a>
                     <ul class="header-under-search">
@@ -69,7 +83,7 @@
                 </div>
             </div>
             <!-- 导航栏 -->
-            <div class="header-nav ">
+            <div class="header-nav " style="position: absolute;width:1000px;">
                 <ul class="header-link">
                     <li class="header-link-first"> 
                         <a href="#">
@@ -644,220 +658,31 @@
                     <li> <a href="#">美妆</a></li>
                     <li> <a href="#">鞋包</a></li>
                     <li> <a href="#">男装</a></li>
-                    <li> <a href="#">更多</a></li>
+                    <li> <a href="./goodsDatails.html">更多</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <div class="product">
-        <div class="product-img ">
-            <img src="../image/goods-img.jpg" alt="">
+    <div class="container-fluid" style="margin-top: 50px;">
+        <div class="cart-content">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>数量</th>
+                    <th>总价</th>
+                    <th>尺寸</th>
+                    <th>颜色</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody id="tb">
+                </tbody>
+            </table>
         </div>
-        <div class="product-content">
-            <h2><a href="#">安踏</a> </h2>
-            <p>男款运动外套国潮经典时尚单茄克修身显瘦男子户外休闲上衣</p>
-            <img src="../image/goods--priceImg.png" alt="" class="goods-price-img">
-            <dl class="product-dl">
-                <dt>运费</dt>
-                <span>新会员专享首单满38元免邮（限唯品自营商品，部分商品不可用）</span>
-            </dl>
-            <!-- 颜色 -->
-            <div id="J_detail_color">
-                <dl class="i-color clearfix">
-                    <dt class="color-name">颜色</dt>
-                    <dd class="color-list">
-                        
-                        <ul class="clearfix ulul">
-                                       
-                            <li class="color-list-item ">
-                                <a id="J-colorItem-6918676589577492381" href="javascript:void(0);" title="石鸳绿" class="J-colorItem ">
-                                                <span class="color-pic-wrapper">
-                                                    <img class="" src="//a.vpimg4.com/upload/merchandise/pdcvis/102824/2020/0526/112/3eb5685c-6de7-422b-b9c6-a75874547b02_65x83_100.jpg"  width="28" height="28" alt="石鸳绿" mars_sead="m_te_goods_buy_color_check">
-                                                </span>
-                                    <span class="color-item-name">石鸳绿</span>
-                                    
-                                    <span class="i-select"></span>
-                                    <span class="i-chance"></span>
-                                </a>
-                            </li>
-                                       
-                            <li class="color-list-item">
-                                <a id="J-colorItem-6918676589577521053" href="javascript:void(0);" title="基础黑" class="J-colorItem color-selected">
-                                                <span class="color-pic-wrapper">
-                                                    <img class="" src="//a.vpimg4.com/upload/merchandise/pdcvis/2020/07/03/61/4201c80f-e15d-4256-93be-f0ad3b0acf8d_65x83_100.jpg"  width="28" height="28" alt="基础黑" mars_sead="m_te_goods_buy_color_check">
-                                                </span>
-                                    
-                                    <span class="color-item-name">基础黑</span>
-                                    
-                                    <span class="i-select"></span>
-                                    <span class="i-chance"></span>
-                                </a>
-                            </li>
-                                       
-                            <li class="color-list-item ">
-                                <a id="J-colorItem-6918676589560694685" href="javascript:void(0);" title="纯净白" class="J-colorItem ">
-                                                <span class="color-pic-wrapper">
-                                                    <img class="" src="//a.vpimg4.com/upload/merchandise/pdcvis/2020/07/03/130/20d6e6fe-1a80-41c7-9a0d-98f48d84af30_65x83_100.jpg"  width="28" height="28" alt="纯净白" mars_sead="m_te_goods_buy_color_check">
-                                                </span>
-                                    
-                                    <span class="color-item-name">纯净白</span>
-                                    
-                                    <span class="i-select"></span>
-                                    <span class="i-chance"></span>
-                                </a>
-                            </li>
-                            
-                        </ul>
-                                
-                    </dd>
-                </dl>
-             </div>
-             <!-- 尺码 -->
-            <div id="J_detail_size">
-                    <dl class="i-size " id="J-sizeArea-wrap">
-                        <dt class="size-name">尺码</dt>
-                        <dd class="size-list size-ulul">
-                            <ul id="size-ul">        
-                                <li class="size-list-item ">
-                                    <span class="size-list-item-name">S</span>
-                                    <span class="i-select"></span>
-                                </li>
-                                <li class="size-list-item ">
-                                    <span class="size-list-item-name">M</span>
-                                    <span class="i-select"></span>
-                                </li>
-                                <li class="size-list-item ">
-                                    <span class="size-list-item-name">L</span>
-                                    <span class="i-select"></span>
-                                </li>
-                                <li class="size-list-item ">
-                                    <span class="size-list-item-name">XL</span>
-                                    <span class="i-select"></span>
-                                </li>
-                                <li class="size-list-item ">
-                                    <span class="size-list-item-name">2XL</span>
-                                    <span class="i-select"></span>
-                                </li>
-                                <li class="size-list-item ">
-                                    <span class="size-list-item-name">3XL</span>
-                                    <span class="i-select"></span>
-                                </li>
-                                <li class="size-list-item ">
-                                    <span class="size-list-item-name">4XL</span>
-                                    <span class="i-select"></span>
-                                </li>
-                            </ul>  
-                        </dd>
-                    </dl>
-            </div>
-            <!-- 数量选择 -->
-            <div id="j_detail_num">
-                <dl class="i-num">
-                    <dt class="size-name ">数量</dt>
-                    <dd class="num-box">
-                        <a href="javascript:;" class="num-reduce">-</a>
-                        <em class="amount"></em>
-                        <a href="javascript:;" class="num-add">+</a>
-                        <div id="goods-price">
-                            <span>￥<i>159</i></span>
-                        </div>
-                    </dd>
-                    
-                </dl>
-                
-            </div>
-           
-            <!-- 加入购物车 -->
-            <div id="j_detail_num">
-                <div class="i-button">
-                    <div class="button-box">
-                        <button type="submit" class="buy-submit">
-                            <span class="ui-btn-loading-before ">
-                                <i class="shopping-bag       iconfont icon-gouwu"></i>
-                                加入购物车
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <div class="clearfix">
-            <img src="../image/goods-bottom-img.png" alt="" class="goods-bottom-img">
-        </div>
+
     </div>
-    <!-- 右侧固定导航栏 -->
-    <div class="m-sidebarcom">
-        <div class="sidebarcom-nav">
-            <div class="sidebarcom-nav-cnt">
-                <ul class="sidebarcom-oper">
-                    <li>
-                        <div class="sidebarcom-my-con">
-                            <div class="sidebarcom-my-con-hide">
-                                <div class="small-btn-box">
-                                    <span class="small-btn">
-                                        <img src="../image/small-btn.png" alt="">
-                                    </span>
-                                </div>
-                                <div class="side-right-img">
-                                    <img src="../image/side-right-img.png" alt="">
-                                </div>
-                                <p>你好！请 <a href="./login.html">登录</a> | <a href="./register.html">注册</a> </p>
-                            </div>
-                            <i class="i-sidebarcom-my iconfont icon-zhanghao">    
-                            </i>
-                            <i class="sidebarcom-my-name">
-                                账号
-                            </i>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="sidebarcom-cart-bar">
-                            <i class="is-cart-highlight iconfont icon-gouwu"></i>
-                            <p class="sidebarcom-cart-text">购物袋</p>
-                            <i class="sidebarcom-rith-num">0</i>
-                        </div>
-                    </li>
-                    <li class="sidebarcom-asset">
-                        <div>
-                            <i class="iconfont icon-youhuiquan"></i>
-                            <p>我的优惠券</p>
-                        </div>
-                    </li>
-                    <li class="sidebarcom-asset">
-                        <div>
-                            <i class="iconfont icon-shoucang"></i>
-                            <p>品牌收藏</p>
-                        </div>
-                    </li>
-                    <li class="sidebarcom-asset">
-                        <div>
-                            <i class="iconfont icon-jingxuan"></i>
-                            <p>商品收藏</p>
-                        </div>
-                    </li>
-                    <li class="sidebarcom-asset">
-                        <div>
-                            <i class="iconfont icon-wodezuji"></i>
-                            <p>我的足迹</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="sidebarcom-nav-ft">
-                <div class="sidebarcom-survey">
-                    <a href="//feedback.vip.com/feedback!hotFeedback.do" target="_blank">
-                        <i class="i-sidebarcom-survey iconfont icon-fankui"></i>
-                    </a>
-                </div>
-                <div class="sidebarcom-survey">
-                    <a href="#" target="_blank">
-                        <i class="i-sidebarcom-survey iconfont icon-dingbu"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <footer class="footer">
         <div class="footer-inner">
             <ul class="footer-vip">
@@ -1014,8 +839,18 @@
             </div>
         </div>
     </footer>
-    <script src="../lib/jquery.js"></script>
-    <script src="../js/index.js"></script>
-    <script src="../js/goodsDatail.js"></script>
+    <script type="text/template" id="datalist">
+        {{each arr}}
+            <tr>
+                <td>{{$value.product_id}}</td>
+                <td>{{$value.product_num}}</td>
+                <td>{{$value.product_price}}</td>
+                <td>{{$value.product_size}}</td>
+                <td>{{$value.product_color}}</td>
+                <td><a class="btn btn-danger btn-xs btn-delete" href='http://127.0.0.1/save/weishop/src/interface/delwq.php?id={{$value.product_id}}'>删除</a><a class="btn btn-success btn-xs btn-com" href="javascript:;">结算</a></td> 
+            </tr>
+        {{/each}}
+    </script>
+    <script src="../lib/bootstarp/js/bootstrap.js"></script> 
 </body>
 </html>

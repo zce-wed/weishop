@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$.get("http://127.0.0.1/save/weishop/src/interface/showlist.php",function(t){var e=JSON.parse(t);if(0==e.code)alert("购物车里面空空的");else{var a=template("datalist",{arr:e.data});$("#tb").html(a)}})});

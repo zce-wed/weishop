@@ -20,13 +20,13 @@
             <!-- //登录 -->
             <div class="box">
                 <h2>唯评会登录</h2>
-                    <form>
+                    <form action="http://127.0.0.1/save/weishop/src/interface/login.php" method="POST">
                         <div class="inputBox">
-                            <input type="text" name="" required="">
+                            <input type="text" name="username" required="">
                             <label>用户名</label>
                         </div>
                         <div class="inputBox">
-                            <input type="password" name="" required="">
+                            <input type="password" name="password" required="">
                             <label>密码</label>
                         </div>
                           <input type="submit" name="" value="登录"> 
@@ -40,6 +40,13 @@
     <!-- //底部 -->
     <div class="c-footer">
         <p class="c-copyright">Copyright 2008-2020 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
-    </div>    
+    </div>   
+    <script>
+           var cook = selectCookie('code')
+       
+       if(cook && cook==1){
+            location.href = 'http://127.0.0.1:8090/pages/index.html#'
+       }
+    </script> 
 </body>
 </html>

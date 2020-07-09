@@ -1785,7 +1785,7 @@
             </div>
         </div>
     </footer>
-
+<!-- //右侧固定导航 -->
 <div class="m-sidebarcom">
     <div class="sidebarcom-nav">
         <div class="sidebarcom-nav-cnt">
@@ -1813,7 +1813,7 @@
                 <li>
                     <div class="sidebarcom-cart-bar">
                         <i class="is-cart-highlight iconfont icon-gouwu"></i>
-                        <p class="sidebarcom-cart-text">购物袋</p>
+                        <p class="sidebarcom-cart-text"><a  href="../pages/cartShow.html" >购物袋</a></p>
                         <i class="sidebarcom-rith-num">0</i>
                     </div>
                 </li>
@@ -1899,7 +1899,13 @@
         mySwiper.navigation.$prevEl.addClass('hide');
     }       
     </script>
-
+    <script src="../js/cookie.js"></script>
+    <script>
+          var cook = selectCookie('code')   
+       if(cook && cook==1){
+            
+       }
+    </script>
      <script src="../lib/jquery.js"></script>
      <script src="../js/index.js"></script>
      <script src="../js/louceng.js"></script>
