@@ -1,3 +1,14 @@
+var a = 1;
+var b = 2;
+var c =0;
+for(var i = 0; i<=10; i++){
+    a++;
+    b++;
+    c =a+b;
+    console.log(c);
+}
+
+
 // 登录框的弹入弹出
 //小×
 $('.small-btn').click(function(){
